@@ -1,7 +1,13 @@
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+api_key = os.getenv("GOOGLE_API_KEY")
 
 # Configure API key
-genai.configure(api_key="AIzaSyCGzL50Q42SQ-KlYe5mOGBqYj7yUB445lM")
+genai.configure(api_key)
 
 # Select model
 model = genai.GenerativeModel("gemini-1.5-pro")  # Change model if needed
@@ -20,4 +26,4 @@ while True:
         else:
             print("\nGemini AI: Sorry, I couldn't generate a response.\n")
     except Exception as e:
-        print("Error:",e)
+        print("Error:", e)
