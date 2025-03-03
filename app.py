@@ -1,6 +1,3 @@
-import streamlit as st
-import json
-import ollama
 
 st.set_page_config(page_title="Synthify")
 
